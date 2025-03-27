@@ -10,12 +10,4 @@ export default defineConfig({
     base: process.env.VITE_BASE_PATH || '/React-Task-Management'
 })
 
-module.exports = {
-  theme: {
-    // ...
-  },
-  plugins: [
-    require('tailwind-scrollbar-hide')
-    // ...
-  ]
-}
+
