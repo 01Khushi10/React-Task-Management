@@ -4,7 +4,7 @@ import crossIcon from "../assets/icon-cross.svg";
 import { useDispatch, useSelector } from "react-redux";
 import boardsSlice from "../redux/boardSlice";
 
-const AddEditTaskModal = ({ type, device, setOpenAddEditTask, prevColIndex = 0, taskIndex, setIsAddTaskModalOpen }) => {
+const AddEditTaskModal = ({ type, device, setOpenAddEditTask, prevColIndex = 0, taskIndex }) => {
   const [title, setTitle] = useState("");
   const [isValid, setIsValid] = useState(true);
     const [description, setDescription] = useState("");
@@ -179,7 +179,6 @@ const AddEditTaskModal = ({ type, device, setOpenAddEditTask, prevColIndex = 0, 
               const isValid = validate();
               if (isValid) {
                 onSubmit(type);
-                setIsAddTaskModalOpen(false);
                 type === "edit" && setOpenAddEditTask(false);
               }
               setOpenAddEditTask(false);
